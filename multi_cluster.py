@@ -8,28 +8,28 @@ import time
 import shutil
 
 # change to your data path
-directory_path = os.path.join('E:/','CheetahData','Antares','2018-07-12_09-32-38')
+directory_path = os.path.join('E:/','path_to_your_data_folder')
 os.chdir(directory_path)
 
 os.system('activate klusta')
 	
-# change according to your tetrode configuration
-tetrode_list=[1, 2, 17, 18,
-				3, 4, 19, 20,
-				5, 6, 21, 22,
-				7, 8, 23, 24,
-				9, 10, 25, 26,
-				11, 12, 27, 28,
-				13, 14, 29, 30,
-				15, 16, 31, 32,
-				33, 34, 49 ,50,
-				35, 36 ,51 ,52,
-				37, 38, 53, 54,
-				39 ,40, 55 ,56,
-				41, 42, 57, 58,
-				43, 44 ,59 ,60,
-				45 ,46 ,61, 62,
-				47,48,63,64]
+# WARNING : change according to your tetrode configuration
+tetrode_list=  [1, 2, 17, 18,    
+		3, 4, 19, 20,
+		5, 6, 21, 22,
+		7, 8, 23, 24,
+		9, 10, 25, 26,
+		11, 12, 27, 28,
+		13, 14, 29, 30,
+		15, 16, 31, 32,
+		33, 34, 49 ,50,
+		35, 36 ,51 ,52,
+		37, 38, 53, 54,
+		39 ,40, 55 ,56,
+		41, 42, 57, 58,
+		43, 44 ,59 ,60,
+		45 ,46 ,61, 62,
+		47,48,63,64]
 
 def createFolder(directory):
 		try:
