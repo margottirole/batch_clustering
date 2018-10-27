@@ -5,19 +5,8 @@ import os
 
 directory_path = os.getcwd()
 
-klusta_path = os.path.join('C:/', 'klusta')
-os.chdir(klusta_path)
-os.system('activate klusta')
 os.chdir(directory_path)
-
-
-#cd C:/klusta
-#activate klusta
-#cd directory_path
-
-#sys.path.insert(0, os.pardir)
-#print(os.pardir)
-#import ncs2dat
+os.system('activate klusta')
 
 
 for i in range(1,64,4):
