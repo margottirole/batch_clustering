@@ -9,16 +9,10 @@ import shutil
 
 # change to your data path
 directory_path = os.path.join('E:/','CheetahData','Antares','2018-07-12_09-32-38')
-
-# change to your parameters file folder containing the .prm, .prb, ncs2dat.py and this script
-parameter_path= os.path.join('E:/', 'Parameter_Files')
-
-#change to your klusta folder
- klusta_path = os.path.join('C:/', 'klusta')
- os.system('activate klusta')
-
 os.chdir(directory_path)
 
+os.system('activate klusta')
+	
 # change according to your tetrode configuration
 tetrode_list=[1, 2, 17, 18,
 				3, 4, 19, 20,
