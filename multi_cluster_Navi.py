@@ -8,7 +8,7 @@ import time
 import shutil
 
 # change to your data path
-directory_path = os.path.join('E:/','CheetahData','Antares','2018-07-23_16-10-23')
+directory_path = os.path.join('E:/','CheetahData','Navi','2018-10-07_10-41-04')
 
 # change to your parameters file folder containing the .prm, .prb, ncs2dat.py and this script
 parameter_path= os.path.join('E:/', 'Parameter_Files')

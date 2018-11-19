@@ -1,5 +1,5 @@
 
-experiment_name = 'tetrode_10'
+experiment_name = 'tetrode_24'
 prb_file = '1tet.prb'
 
 traces = dict(

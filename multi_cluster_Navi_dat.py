@@ -8,7 +8,7 @@ import time
 import shutil
 
 # change to your data path
-directory_path = os.path.join('E:/','CheetahData','Antares','2018-07-23_16-10-23')
+directory_path = os.path.join('E:/','CheetahData','Navi','2018-10-05_09-42-15')
 
 # change to your parameters file folder containing the .prm, .prb, ncs2dat.py and this script
 parameter_path= os.path.join('E:/', 'Parameter_Files')
@@ -67,27 +67,27 @@ if __name__ == '__main__':
 				ncs2dat_path= os.path.join(parameter_path, 'ncs2dat.py')
 				os.system('python ' + ncs2dat_path + ' ' + command_line + ' ' + dat_file) 
 				
-			createFolder(folder_path)
-			shutil.copy(dat_file, folder_path)
-			shutil.copy(prm_file, folder_path)
-			shutil.copy(prb_file, folder_path)
+			# createFolder(folder_path)
+			# shutil.copy(dat_file, folder_path)
+			# shutil.copy(prm_file, folder_path)
+			# shutil.copy(prb_file, folder_path)
 			
-			p = multiprocessing.Process(target=runklust, args=(tetrode,folder_path,i,))
-			jobs.append(p)
-			p.start()
+			# p = multiprocessing.Process(target=runklust, args=(tetrode,folder_path,i,))
+			# jobs.append(p)
+			# p.start()
 			
-		for j in jobs:
-			j.join()
-			print('%s.exitcode = %s' % (j.name, j.exitcode))
+		# for j in jobs:
+			# j.join()
+			# print('%s.exitcode = %s' % (j.name, j.exitcode))
 		
-		for i in range(1,17):
-			folder_path= os.path.join(directory_path, 'tetrode' + "_%d" % (i))
-			tetrode= 'tetrode' + "_%d" % (i)
-			kwik_file= os.path.join(folder_path, tetrode + '.kwik')
-			kwx_file= os.path.join(folder_path, tetrode + '.kwx')
-			shutil.move(kwik_file, directory_path)
-			shutil.move(kwx_file, directory_path)
-			shutil.rmtree(folder_path)
-			os.chdir(directory_path)
+		# for i in range(1,17):
+			# folder_path= os.path.join(directory_path, 'tetrode' + "_%d" % (i))
+			# tetrode= 'tetrode' + "_%d" % (i)
+			# kwik_file= os.path.join(folder_path, tetrode + '.kwik')
+			# kwx_file= os.path.join(folder_path, tetrode + '.kwx')
+			# shutil.move(kwik_file, directory_path)
+			# shutil.move(kwx_file, directory_path)
+			# shutil.rmtree(folder_path)
+			# os.chdir(directory_path)
 
 				

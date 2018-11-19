@@ -7,8 +7,9 @@ import subprocess
 import time
 import shutil
 
+#
 # change to your data path
-directory_path = os.path.join('E:/','CheetahData','Antares','2018-07-23_16-10-23')
+directory_path = os.path.join('E:/','CheetahData','Izar','2018-10-04_11-21-48')
 
 # change to your parameters file folder containing the .prm, .prb, ncs2dat.py and this script
 parameter_path= os.path.join('E:/', 'Parameter_Files')
@@ -20,22 +21,7 @@ parameter_path= os.path.join('E:/', 'Parameter_Files')
 os.chdir(directory_path)
 
 # change according to your tetrode configuration
-tetrode_list=[1, 2, 17, 18,
-				3, 4, 19, 20,
-				5, 6, 21, 22,
-				7, 8, 23, 24,
-				9, 10, 25, 26,
-				11, 12, 27, 28,
-				13, 14, 29, 30,
-				15, 16, 31, 32,
-				33, 34, 49 ,50,
-				35, 36 ,51 ,52,
-				37, 38, 53, 54,
-				39 ,40, 55 ,56,
-				41, 42, 57, 58,
-				43, 44 ,59 ,60,
-				45 ,46 ,61, 62,
-				47,48,63,64]
+tetrode_list=list(range(1,97))
 
 def createFolder(directory):
 		try:
@@ -54,7 +40,7 @@ def runklust(tetrode,folder_path,i):
 
 if __name__ == '__main__':
 		jobs=[]
-		for i in range(1,17):
+		for i in range(1,25):
 			tetrode= 'tetrode' + "_%d" % (i)
 			dat_file= os.path.join(directory_path, 'tetrode' + "_%d.dat" % (i))
 			prm_file= os.path.join(parameter_path, 'tetrode' + "_%d.prm" % (i))
@@ -80,7 +66,7 @@ if __name__ == '__main__':
 			j.join()
 			print('%s.exitcode = %s' % (j.name, j.exitcode))
 		
-		for i in range(1,17):
+		for i in range(1,25):
 			folder_path= os.path.join(directory_path, 'tetrode' + "_%d" % (i))
 			tetrode= 'tetrode' + "_%d" % (i)
 			kwik_file= os.path.join(folder_path, tetrode + '.kwik')

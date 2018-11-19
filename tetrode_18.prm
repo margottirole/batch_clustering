@@ -1,5 +1,5 @@
 
-experiment_name = 'tetrode_10'
+experiment_name = 'tetrode_18'
 prb_file = '1tet.prb'
 
 traces = dict(
@@ -29,7 +29,7 @@ spikedetekt = dict(
 
     connected_component_join_size=1,
  
-    extract_s_before=24,    
+    extract_s_before=24,   
     extract_s_after=24,
 
     n_features_per_channel=3,  # Number of features per channel.
